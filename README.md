@@ -20,7 +20,7 @@ We release this challenging dataset consisting image frames of tail-end distribu
     git clone git@github.com:mosamdabhi/MBW-Data.git
     cd MBW-Data
     ```
-2. Download the data from Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6626508.svg)](https://doi.org/10.5281/zenodo.6626508)
+2. Download the data zip file from Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6626508.svg)](https://doi.org/10.5281/zenodo.6626508)
 3. Uncompress the data zip file `MBW-Data.zip` and place it in the current working directory.
 4. Create a conda environment to run the visualization scripts.
     ```
