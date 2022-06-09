@@ -4,7 +4,7 @@
 <!-- ![Alt Text](overview.gif | width=100) -->
 <!-- <img src=overview.gif width="750"> -->
 <p align="center">
-  <img width="750" src=overview.gif>
+  <img width="750" src=overview.webm>
 </p>
 
 Labeling articulated objects in unconstrained settings have a wide variety of applications including entertainment, neuroscience, psychology, ethology, and many fields of medicine. Large offline labeled datasets do not exist for all but the most common articulated object categories (e.g., humans). With just a few annotations (representing 1-2% of the frames), we are able to produce 2D results comparable to state-of-the-art fully supervised methods, and obtain 3D reconstructions that are impossible with other existing approaches. Our Multi-view Bootstrapping in the Wild (MBW) approach demonstrates results on standard human datasets, as well as tigers, cheetahs, fish, colobus monkeys, chimpanzees, and flamingos from videos captured casually in a zoo. 
