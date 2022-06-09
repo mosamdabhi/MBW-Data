@@ -21,7 +21,7 @@ We release this challenging dataset consisting image frames of tail-end distribu
     cd MBW-Data
     ```
 2. Download the data from Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6626508.svg)](https://doi.org/10.5281/zenodo.6626508)
-3. Uncompress the zip and place it in the current working directory.
+3. Uncompress the zip file `MBW-Data.zip` and place it in the current working directory.
 4. Create a conda environment to run the visualization scripts.
     ```
     conda env create -f environment.yml && conda activate mbw
