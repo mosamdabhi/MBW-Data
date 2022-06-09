@@ -2,7 +2,7 @@
 
 By: [Mosam Dabhi](TODO:url) `<mdabhi@andrew.cmu.edu>`
 
-As part of this work making dataset collection more easy and amenable in a wildly unconstrained setup, we collected a dataset of zoo animals during using smartphone grade cameras, and annotated (~2\%) of the collected frames with 2D keypoint landmarks. We call this dataset the **Multiview Bootstrapping in the wild (MBW) dataset**; what follows below is the [datasheet](https://arxiv.org/abs/1803.09010) describing this data. If you use this dataset, please acknowledge it by citing the original paper.
+As part of this work making dataset collection more easy and amenable in a wildly unconstrained setup, we collected a dataset of zoo animals using smartphone grade cameras, and annotated (~2\%) of the collected frames with 2D keypoint landmarks. We call this dataset the **Multiview Bootstrapping in the wild (MBW) Zoo dataset**; what follows below is the [datasheet](https://arxiv.org/abs/1803.09010) describing this data. If you use this dataset, please acknowledge it by citing the original paper.
 
 
 ## Motivation
