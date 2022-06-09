@@ -185,8 +185,8 @@ def visualize_labels(args, im, W, BBox, confidence, img_store_location, joint_co
 def main(args):
 
     # Extract annotation and image file paths
-    dataset_img = '../MBW-Data/' + args.dataset + '/images/'
-    dataset_annot = '../MBW-Data/' + args.dataset + '/annot/'
+    dataset_img = '../Data/' + args.dataset + '/images/'
+    dataset_annot = '../Data/' + args.dataset + '/annot/'
     
     # Generate directories to store visualizations
     logs_path = '../' + args.vis_labels_path    
