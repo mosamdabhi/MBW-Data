@@ -50,9 +50,12 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
     In total, there are **16520** instances in this dataset from **6** different object categories. The overall dataset statistics below reflect the above description:
     
 
-    | Object      | # Frames | # Views | # Joints | % Manual annotated  | Labels from MBW  |
+    | Object      | # Frames | # Views | # Joints | % Manual labels  |  Labels from MBW  |
     | :---        | :---: | :---:   | :---:     | :---:     | :---:     |
-    | Fish        | 1456    | 2  | 12      |  2.7      | j      |
+    | Fish        | 1456    | 2  | 12      |  2.7      |  <img width="100" src=../graphics/gr_available.png>    |
+    | Colobus Monkey        | 391    | 2  | 16      |  5.1      |  <img width="100" src=../graphics/gr_available.png>    |
+    | Chimpanzee        | 204    | 2  | 16      |  6.3      |  <img width="100" src=../graphics/gr_available.png>    |    
+    | Chimpanzee        | 204    | 2  | 16      |  6.3      |  <img width="100" src=../graphics/gr_available.png>    |        
 
 <span style="color:red">some **This is Red Bold.** text</span>
 
