@@ -54,10 +54,10 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
     | Fish          | 1456       | 12       |  2.7                 |  <img width="100" src=../graphics/gr_available.png>         | 
     | Colobus Monkey| 391        | 16       |  5.1                 |  <img width="100" src=../graphics/gr_available_grey_bg.png> |
     | Chimpanzee    | 204        | 16       |  6.3                 |  <img width="100" src=../graphics/gr_available.png>         |
-    | Tiger         | 1829       | 14       |  0.5                 |  <img width="100" src=../graphics/gr_NA_grey_bg.png>        |
+    | Tiger         | 1829       | 14       |  2                 |  <img width="100" src=../graphics/gr_NA_grey_bg.png>        |
     | Clownfish     | 909        | 6        |  2                   |  <img width="100" src=../graphics/gr_NA.png>                |    
     | Seahorse      | 479        | 6        |  2                   |  <img width="100" src=../graphics/gr_NA_grey_bg.png>        |        
-    | Turtle        | 479        | 6        |  2                   |  <img width="100" src=../graphics/gr_NA_grey_bg.png>        |            
+    | Turtle        | 2806        | 6        |  2                   |  <img width="100" src=../graphics/gr_NA_grey_bg.png>        |            
     
 
 **Please note**:  We are unable to provide the stereo baseline distance (m) and stereo angle (°) since the data was captured where the cameras were continuously moving thereby changing these metrics. 
