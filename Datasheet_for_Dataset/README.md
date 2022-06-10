@@ -43,7 +43,7 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 
 
-2. **How many instances are there in total (of each type, if appropriate)?**
+2. **<a name="instance_information">How many instances are there in total (of each type, if appropriate)? </a>** 
     
 
     In total, there are **16148** instances in this dataset from **6** different object categories, coming from **2** camera views. The overall dataset statistics below reflect the above description:
@@ -57,7 +57,7 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
     | Tiger         | 1829       | 14       |  2                 |  <img width="100" src=../graphics/gr_NA_grey_bg.png>        |
     | Clownfish     | 909        | 6        |  2                   |  <img width="100" src=../graphics/gr_NA.png>                |    
     | Seahorse      | 479        | 6        |  2                   |  <img width="100" src=../graphics/gr_NA_grey_bg.png>        |        
-    | Turtle        | 2806        | 6        |  2                   |  <img width="100" src=../graphics/gr_NA_grey_bg.png>        |            
+    | Turtle        | 2806       | 9       |  2                   |  <img width="100" src=../graphics/gr_NA_grey_bg.png>        |            
     
 
 **Please note**:  We are unable to provide the stereo baseline distance (m) and stereo angle (°) since the data was captured where the cameras were continuously moving thereby changing these metrics. 
@@ -67,54 +67,87 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 3. **Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set?** *(If the dataset is a sample, then what is the larger set? Is the sample representative of the larger set (e.g., geographic coverage)? If so, please describe how this representativeness was validated/verified. If it is not representative of the larger set, please describe why not (e.g., to cover a more diverse range of instances, because instances were withheld or unavailable).)*
 
-    It is a sample of all videos captured casually in an unconstrained environment such as zoo. It is not intended to be representative: the data was collected randomly in the order of visit. This data collection process was specifically designed as a proof-of-concept for the approaches mentioned in MBW paper -- to label articulated objects in the wild at scale.  
+    It is a sample of all videos captured casually in an unconstrained environment such as zoo. It is not intended to be representative: the data was collected randomly in the order of visit. This data was collected with the intent to show the applicability of MBW in challenging data scenarios -- specifically to label articulated objects in the wild at scale.  
 
 
 
 
-4. **What data does each instance consist of?** *(``Raw'' data (e.g., unprocessed text or images)or features? In either case, please provide a description.)* 
+4. **<a name="pkl_information">What data does each instance consist of?</a>** *(``Raw'' data (e.g., unprocessed text or images)or features? In either case, please provide a description.)*
+
+    The dataset is divided into two directories: `annot` and `images`. As names suggest, the `annot` directory contains annotations and `images` directory consists of 2-view synchronized image frames. The annotations are provided as a `.pkl` file. The pickle files consists of following keys:
+
+    | Key        | Description |
+    | :---          | :---     |
+    | W_GT          | Manual annotation. Non-NaN values for 1-2% of data. NaN values for the rest.      |
+    | W_Pred        | 2D landmark predictions (labels) generated from MBW.       | 
+    | S_Pred         | 3D landmark predictions (labels) generated from MBW. The 3D reconstructions are up-to-scale.       | 
+    | BBox    | Bounding box crops generated from MBW          | 
+    | confidence    | Flag specifying confidence for the MBW predictions. `True` specifies high confidence. `False` specifies low confidence. This flag is generated from the uncertainty equation (Eq. 2) given in the paper.          | 
+
+
     
 
 5. **Is there a label or target associated with each instance? If so, please provide a description.**
+
+    As noted in the column **Labels from MBW** in the [instance information table](#instance_information), label or targets for each instance are associated for the categories with flag **Available** (all the fields shown [above](pkl_information) are available in the pickle file). For the rest, only initial 2% `W_GT` labels are provided, since we did not run MBW that could provide us with labels. We release this dataset to set a benchmark for solving challenging 2D and 3D landmark prediction tasks for in-the-wild unconstrained video captures.
     
 
 
 6. **Is any information missing from individual instances?** *(If so, please provide a description, explaining why this information is missing (e.g., because it was unavailable). This does not include intentionally removed information, but might include, e.g., redacted text.)*
+
+    The prediction labels (`W_Pred`, `S_Pred`, `BBox`, and `confidence`) are missing for the categories where MBW is not run as shown in column **Labels from MBW** in the [instance information table](#instance_information) above.
     
 
 
 7. **Are relationships between individual instances made explicit (e.g., users' movie ratings, social network links)?** *( If so, please describe how these relationships are made explicit.)*
+
+    Instances are unrelated.
+
     
 
 8. **Are there recommended data splits (e.g., training, development/validation, testing)?** *(If so, please provide a description of these splits, explaining the rationale behind them.)*
+
+    Since the sole purpose of this data collection was to generate labels from scratch, we expect this data to be used solely for generating labels for unlabeled data. Thus, we do not explicitly provide a training/validation/testing split; however, we recognize that people may wish to do this, or to do some form of cross-validation. We would suggest cross-validation and test split by dividing the manual labels into 80/10/10 split and pick the samples via a uniform sampling 
+
     
 
 
 9. **Are there any errors, sources of noise, or redundancies in the dataset?** *(If so, please provide a description.)*
+
+    Since the inital 2D keypoints were manually labeled, there are almost certainly some errors in `W_GT` (the manual label field in the annotation file). We did our best to minimize these, but some certainly remain.
+    
     
 
 
 10. **Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g., websites, tweets, other datasets)?** *(If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (i.e., including the external resources as they existed at the time the dataset was created); c) are there any restrictions (e.g., licenses, fees) associated with any of the external resources that might apply to a future user? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.)*
+
+    The dataset needs to be downloaded using the following DOI from Zenodo server: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6626508.svg)](https://doi.org/10.5281/zenodo.6626508)
     
 
 
 11. **Does the dataset contain data that might be considered confidential (e.g., data that is protected by legal privilege or by doctor-patient confidentiality, data that includes the content of individuals' non-public communications)?** *(If so, please provide a description.)*
+    No.
     
 
 
 12. **Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety?** *(If so, please describe why.)*
+    No.
     
 13. **Does the dataset relate to people?** *(If not, you may skip the remaining questions in this section.)*
+    No.
     
 
 
 14. **Does the dataset identify any subpopulations (e.g., by age, gender)?** *(If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.)*
+    N/A.
 
 
 15. **Is it possible to identify individuals (i.e., one or more natural persons), either directly or indirectly (i.e., in combination with other data) from the dataset?** *(If so, please describe how.)*
+    N/A.
     
 
 16. **Does the dataset contain data that might be considered sensitive in any way (e.g., data that reveals racial or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)?** *(If so, please provide a description.)*
+    N/A.
     
 
 
