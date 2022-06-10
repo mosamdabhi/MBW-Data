@@ -45,19 +45,22 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 2. **How many instances are there in total (of each type, if appropriate)?**
     
-    The dataset consists instances from 6 different object categories:
 
-    In total, there are **16520** instances in this dataset from **6** different object categories. The overall dataset statistics below reflect the above description:
+    In total, there are **16520** instances in this dataset from **6** different object categories. All the instances are captured from **2** camera views. The overall dataset statistics below reflect the above description:
     
 
-    | Object      | # Frames | # Views | # Joints | % Manual labels  |  Labels from MBW  |
-    | :---        | :---: | :---:   | :---:     | :---:     | :---:     |
-    | Fish        | 1456    | 2  | 12      |  2.7      |  <img width="100" src=../graphics/gr_available.png>    |
-    | Colobus Monkey        | 391    | 2  | 16      |  5.1      |  <img width="100" src=../graphics/gr_available_grey_bg.png>    |
-    | Chimpanzee        | 204    | 2  | 16      |  6.3      |  <img width="100" src=../graphics/gr_available.png>    |    
-    | Chimpanzee        | 204    | 2  | 16      |  6.3      |  <img width="100" src=../graphics/gr_available_grey_bg.png>    |        
+    | Object        | Frames (#) | Joints (#) | Manual labels (%)  |                Labels from MBW                              | 
+    | :---          | :---:      | :---:    | :---:                |                 :---:                                       |
+    | Fish          | 1456       | 12       |  2.7                 |  <img width="100" src=../graphics/gr_available.png>         | 
+    | Colobus Monkey| 391        | 16       |  5.1                 |  <img width="100" src=../graphics/gr_available_grey_bg.png> |
+    | Chimpanzee    | 204        | 16       |  6.3                 |  <img width="100" src=../graphics/gr_available.png>         |
+    | Tiger         | 1829       | 14       |  0.5                 |  <img width="100" src=../graphics/gr_NA_grey_bg.png>        |
+    | Clownfish     | 909        | 6        |  2                   |  <img width="100" src=../graphics/gr_NA.png>                |    
+    | Seahorse      | 479        | 6        |  2                   |  <img width="100" src=../graphics/gr_NA_grey_bg.png>        |        
+    | Turtle        | 479        | 6        |  2                   |  <img width="100" src=../graphics/gr_NA_grey_bg.png>        |            
+    
 
-<span style="color:red">some **This is Red Bold.** text</span>
+**Please note**:  We are unable to provide the stereo baseline distance (m) and stereo angle (°) since the data was captured where the cameras were continuously moving thereby changing these metrics. 
 
 
 
