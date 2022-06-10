@@ -1,6 +1,6 @@
 # MBW Zoo Dataset
 
-By: [Mosam Dabhi](TODO:url) `<mdabhi@andrew.cmu.edu>`, [Chaoyang Wang], [Tim Clifford], [Laszlo Jeni],[Ian Fasel], [Simon Lucey]
+By: [Mosam Dabhi](TODO:url) `<mdabhi@andrew.cmu.edu>`, Chaoyang Wang, Tim Clifford, Laszlo Jeni, Ian Fasel, Simon Lucey
 
 As part of making dataset collection more easy and amenable in a wildly unconstrained setup, we collect a dataset of zoo animals using smartphone grade cameras, and annotate (~2\%) of the collected frames with 2D keypoint landmarks. We call this dataset the **Multiview Bootstrapping in the wild (MBW) Zoo dataset**; what follows below is the [datasheet](https://arxiv.org/abs/1803.09010) describing this data. If you use this dataset, please acknowledge it by citing the original paper.
 
@@ -53,9 +53,9 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
     | Object      | # Frames | # Views | # Joints | % Manual labels  |  Labels from MBW  |
     | :---        | :---: | :---:   | :---:     | :---:     | :---:     |
     | Fish        | 1456    | 2  | 12      |  2.7      |  <img width="100" src=../graphics/gr_available.png>    |
-    | Colobus Monkey        | 391    | 2  | 16      |  5.1      |  <img width="100" src=../graphics/gr_available.png>    |
+    | Colobus Monkey        | 391    | 2  | 16      |  5.1      |  <img width="100" src=../graphics/gr_available_grey_bg.png>    |
     | Chimpanzee        | 204    | 2  | 16      |  6.3      |  <img width="100" src=../graphics/gr_available.png>    |    
-    | Chimpanzee        | 204    | 2  | 16      |  6.3      |  <img width="100" src=../graphics/gr_available.png>    |        
+    | Chimpanzee        | 204    | 2  | 16      |  6.3      |  <img width="100" src=../graphics/gr_available_grey_bg.png>    |        
 
 <span style="color:red">some **This is Red Bold.** text</span>
 
