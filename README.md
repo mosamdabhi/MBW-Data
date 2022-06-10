@@ -27,19 +27,46 @@ We release this challenging dataset consisting image frames of tail-end distribu
     conda env create -f environment.yml && conda activate mbw
     ```
 
+# Dataset capture
+We capture 2-View videos from handheld smartphone cameras. In our case, we used an iPhone 11 Pro Max and an iPhone 12 Pro Max to capture the video sequences. We use Final Cut Pro to manually synchronize the 2-View video sequences using the audio signal and time stamps. 
+
+## Overall object cateogories
+In total, the instances in this dataset arise from 7 different object categories, coming from 2 camera views:
+<p align="center">
+  <img width="750" src=graphics/all_instances.jpg>
+</p>
+
+
+
+## Sequential data example
+Example 2-View sequences from the capture of Fish, Chimpanzee, Colobus Monkey, and Tiger categories are shown below:
+<p align="center">
+  <img width="750" src=graphics/data_capture_1.gif>
+</p>
+
 # Dataset preprocessing
-We capture 2-View videos from handheld smartphone cameras. In our case, we used an iPhone 11 Pro Max and an iPhone 12 Pro Max to capture the video sequences. We use Final Cut Pro to manually synchronize the 2-View video sequences using the audio signal and time stamps. Please note that all we require are 2-view synchronized image frames and manual annotations for 1-2% of the data. No camera calibration (intrinsics or extrinsics) is required to run MBW. 
+Please note that all we require are 2-view synchronized image frames and manual annotations for 1-2% of the data. No camera calibration (intrinsics or extrinsics) is required to run MBW. 
 
 
 # Dataset format
 The dataset is divided into two directories: `annot` and `images`. As names suggest, the `annot` directory contains annotations and `images` directory consists of N-view synchronized image frames. Here, N=2, i.e. this dataset consists of 2-View video sequences. 
 
 
-# Groundtruth annotation
-We manually annotate 1-2% of the image frames per view. Our annotation consists of the 2D landmark keypoints. We specify the number of keypoints and keypoint connections (joint connections) in the following sections.
+# Annotation
+We manually annotate 1-2% of the image frames per view. Our annotation consists of the 2D landmark keypoints. 
+
+## Joint connection visualization
+
+- We specify the number of keypoints and visualizae keypoint connections (joint connections) in the section below.
+
+    | Fish        | Chimpanzee |
+    | :---:          | :---     |
+    | <img width="150" src=graphics/joints_fish.jpg>     |
+
+    
 
 
-# Annotation format
+## Annotation format (.pkl file)
 - The annotations are provided as a `.pkl` file. The pickle files consists of following keys:
 
     | Key        | Description |
@@ -50,11 +77,8 @@ We manually annotate 1-2% of the image frames per view. Our annotation consists 
     | BBox    | Bounding box crops generated from MBW          | 
     | confidence    | Flag specifying confidence for the MBW predictions. `True` specifies high confidence. `False` specifies low confidence. This flag is generated from the uncertainty equation (Eq. 2) given in the paper.          | 
 
-# Images format
-Corresponding images are stored in the `images` directory as `.jpg` files. Each directory consists of 2-view synchronized image frames. Example 2-View sequences from the capture of Fish, Chimpanzee, Colobus Monkey, and Tiger categories are shown below:
-<p align="center">
-  <img width="750" src=graphics/data_capture_1.gif>
-</p>
+# Images
+Corresponding images are stored in the `images` directory as `.jpg` files. Each directory consists of 2-view synchronized image frames. 
 
 
 # Visualization of labels
