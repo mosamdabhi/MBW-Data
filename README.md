@@ -19,7 +19,11 @@ Table of contents
       * [Frames visualization](#frames-visualization)
       * [Sequences visualization](#sequences-visualization)
       * [Joint connections visualization](#joint-connections-visualization)
+      * [Predicted labels visualization](#predicted-labels-visualization)
+      * [Images format](#images-format)
    * [Released dataset format](#released-dataset-format)
+      * [Annotations format](#annotations-format)  
+      * [Images format](#images-format)
    * [Python visualization scripts](#python-visualization-scripts)
    * [Generate labels for your own capture!](#generate-labels-for-your-own-capture)
 <!--te-->
@@ -76,25 +80,32 @@ Joint connections visualization
     | :---:          | :---:     | :---:     |:---:     |:---:     |:---:     |:---:     |
     | <img width="250" src=graphics/joints_fish_no_name.jpg>     | <img width="150" src=graphics/joints_chimpanzee.jpg>    | <img width="150" src=graphics/joints_colobus_monkey.jpg>    | <img width="250" src=graphics/joints_tiger.jpg>    | <img width="150" src=graphics/joints_clownfish.jpg>    | <img width="150" src=graphics/joints_seahorse.jpg>    | <img width="150" src=graphics/joints_turtle.jpg>    
 
-
-Annotation format
+Predicted labels visualization
 ------------------
-
-- The annotations are provided as a `.pkl` file. The pickle files consists of following keys:
-
-    | Key        | Description |
-    | :---          | :---     |
-    | W_GT          | Manual annotation. Non-NaN values for 1-2% of data. NaN values for the rest.      |
-    | W_Pred        | 2D landmark predictions (labels) generated from MBW.       | 
-    | S_Pred         | 3D landmark predictions (labels) generated from MBW. The 3D reconstructions are up-to-scale.       | 
-    | BBox    | Bounding box crops generated from MBW          | 
-    | confidence    | Flag specifying confidence for the MBW predictions. `True` specifies high confidence. `False` specifies low confidence. This flag is generated from the uncertainty equation (Eq. 2) given in the paper.          | 
 
 
 Released dataset format
 ============
 
-The dataset ([![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6626508.svg)](https://doi.org/10.5281/zenodo.6626508)) is divided into two directories: `annot` and `images`. As names suggest, the `annot` directory contains annotations and `images` directory consists of 2-view synchronized image frames. While images are stored in the `images` directory as `.jpg` files, the annotations are stored in the `annot` directory as `.pkl` files.
+The dataset ([![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6626508.svg)](https://doi.org/10.5281/zenodo.6626508)) is divided into two directories: `annot` and `images`. As names suggest, the `annot` directory contains annotations and `images` directory consists of 2-view synchronized image frames.
+
+
+Annotations format
+------------------
+
+- The annotations are provided as a `.pkl` file. The pickle files consists of following keys:
+
+    | Key           | Description |
+    | :---          | :---     |
+    | W_GT          | Manual annotation. Non-NaN values for 1-2% of data. NaN values for the rest.      |
+    | W_Pred        | 2D landmark predictions (labels) generated from MBW.       | 
+    | S_Pred        | 3D landmark predictions (labels) generated from MBW. The 3D reconstructions are up-to-scale.       | 
+    | BBox          | Bounding box crops generated from MBW          | 
+    | confidence    | Flag specifying confidence for the MBW predictions. `True` specifies high confidence. `False` specifies low confidence. This flag is generated from the uncertainty equation (Eq. 2) given in the paper.          | 
+
+Images format
+------------------
+The images are provided in the `images` directory as `.jpg` files.
 
 
 Python visualization scripts
