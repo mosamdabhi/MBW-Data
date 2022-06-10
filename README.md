@@ -51,7 +51,11 @@ We manually annotate 1-2% of the image frames per view. Our annotation consists 
     | confidence    | Flag specifying confidence for the MBW predictions. `True` specifies high confidence. `False` specifies low confidence. This flag is generated from the uncertainty equation (Eq. 2) given in the paper.          | 
 
 # Images format
-Corresponding images are stored in the `images` directory as `.jpg` files. Each directory consists of N-view synchronized image frames.
+Corresponding images are stored in the `images` directory as `.jpg` files. Each directory consists of 2-view synchronized image frames. Example 2-View sequences from the capture of Fish, Chimpanzee, Colobus Monkey, and Tiger categories are shown below:
+<p align="center">
+  <img width="750" src=graphics/data_capture_1.gif>
+</p>
+
 
 # Visualization of labels
 - The generated annotations (labels) could be visualized with the following shell script. To run the visualzation, run the following:
