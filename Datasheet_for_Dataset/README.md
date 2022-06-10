@@ -1,18 +1,17 @@
 # MBW Zoo Dataset
 
-By: [Mosam Dabhi](TODO:url) `<mdabhi@andrew.cmu.edu>`
+By: [Mosam Dabhi](TODO:url) `<mdabhi@andrew.cmu.edu>`, [Chaoyang Wang], [Tim Clifford], [Laszlo Jeni],[Ian Fasel], [Simon Lucey]
 
-As part of this work making dataset collection more easy and amenable in a wildly unconstrained setup, we collected a dataset of zoo animals using smartphone grade cameras, and annotated (~2\%) of the collected frames with 2D keypoint landmarks. We call this dataset the **Multiview Bootstrapping in the wild (MBW) Zoo dataset**; what follows below is the [datasheet](https://arxiv.org/abs/1803.09010) describing this data. If you use this dataset, please acknowledge it by citing the original paper.
+As part of making dataset collection more easy and amenable in a wildly unconstrained setup, we collect a dataset of zoo animals using smartphone grade cameras, and annotate (~2\%) of the collected frames with 2D keypoint landmarks. We call this dataset the **Multiview Bootstrapping in the wild (MBW) Zoo dataset**; what follows below is the [datasheet](https://arxiv.org/abs/1803.09010) describing this data. If you use this dataset, please acknowledge it by citing the original paper.
 
 
 ## Motivation
 
-
 1. **For what purpose was the dataset created?** *(Was there a specific task in mind? Was there a specific gap that needed to be filled? Please provide a description.)*
 
-    This dataset was created to generate 2D and 3D labels of articulated objects in unconstrained settings. Such unconstrained and casually collected datasets have a wide variety of applications including entertainment, neuroscience, psychology, ethology, and many fields of medicine. Large offline labeled datasets do not exist for all but the most common articulated object categories (e.g., humans, hands, cars). Hand labeling these landmarks within a video sequence is a laborious task. Learned landmark detectors can help, but can be error-prone when trained from only a few examples. Although the main contribution of the paper is a framework that could be used to generate labels and dataset, we provide this dataset as a proof-of-concept that our approach is able to generate 2D and 3D labels in very challenging scenarios where previous approaches fail to provide reasonable labels. 
+    This dataset was created to generate 2D and 3D labels of articulated objects in unconstrained settings. Such unconstrained and casually collected datasets have a wide variety of applications including entertainment, neuroscience, psychology, ethology, and many fields of medicine. Large offline labeled datasets do not exist for all but the most common articulated object categories (e.g., humans, hands, cars). Hand labeling these landmarks within a video sequence is a laborious task. Learned landmark detectors can help, but can be error-prone when trained from only a few examples. As part of contribution of this paper, we provide this dataset where 2D and 3D labels are generated in very challenging scenarios, using our approach. 
     
-    This dataset is a proof-of-concept to show that all the user require is a few handheld videos and 2D labels for ~15 frames per video. No other camera intrinsics or extrinsics information is required and we are able to generate labels as shown in the given dataset.
+    Note that the user is required to only provide handheld videos from 2 or more views and manual 2D keypoint labels for ~15 frames per video. No camera intrinsics or extrinsics information is required to generate the labels shown in this dataset.
     
 
 
@@ -24,7 +23,7 @@ As part of this work making dataset collection more easy and amenable in a wildl
 
 1. **Who funded the creation of the dataset?** *(If there is an associated grant, please provide the name of the grantor and the grant name and number.)*
 
-    Funding for Mosam was provided through the Robotics Institute department at CMU; the annotations in the dataset were hand labeled by Mosam.
+    N/A.
 
 
 1. **Any other comments?**
@@ -46,27 +45,17 @@ As part of this work making dataset collection more easy and amenable in a wildl
 
 2. **How many instances are there in total (of each type, if appropriate)?**
     
-    The dataset consists of instances from 5 different object categories:
-     * Fish: This instance consists of 1456 image frames captured from 2 camera views. Total instances in this category are 2912.
-     * Clownfish: This instance consists of 910 image frames captured from 2 camera views. Total instances in this category are 1820.
-     * Colobus Monkey: This instance consists of 392 image frames captured from 2 camera views. Total instances in this category are 784.
-     * Tiger: This instance consists of 2011 image frames captured from 2 camera views. Total instances in this category are 4022.
-     * Chimpanzee: This instance consists of 204 image frames captured from 2 camera views. Total instances in this category are 408.
-     * Turtle: This instance consists of 2807 image frames captured from 2 camera views. Total instances in this category are 5614.
-     * Seahorse: This instance consists of 480 image frames captured from 2 camera views. Total instances in this category are 960.
+    The dataset consists instances from 6 different object categories:
 
-    In total, there are **16520** instances in this dataset. The overall dataset statistics below reflect the above description:
+    In total, there are **16520** instances in this dataset from **6** different object categories. The overall dataset statistics below reflect the above description:
+    
 
-    | Object        | #Frames/view | #Views | #2D G.T. | # Keypoints | % Labeled Iter 0 | % Labeled Iter 2
-    | :---          | :---:        | :---:  | :---:    |  :---:   |   :---:   | :---:   |
-    | Fish          | 1456         |   2    |   40     |    12      |   2.7%     | 95% |
-    | Colobus Monkey| 392          |   2    |   20     |    16      |   5.1%     |  95% |      
-    | Tiger         | 1829         |   2    |   8      |    14      |   0.4%     |95% |            
-    | Chimpanzee    | 204          |   2    |   13     |    16      |   6.3%     | 95% |               
-    | Seahorse      | 480          |   2    |   15     |     6      |  3.1%     |  95% |   
-    | Clownfish     | 910          |   2    |   20     |    4     |   2.2%     |  95% |      
-    | Turtle        | 2807          |   2    |   0     |    N/A     |   N/A     |  N/A          
-    | **TOTAL**     | **8260**     | **2**  |  **205**   |    **-**      |   **2.4%** | **95%** |
+    | Object      | # Frames | # Views | # Joints | % Manual annotated  | Labels from MBW  |
+    | :---        | :---: | :---:   | :---:     | :---:     | :---:     |
+    | Fish        | 1456    | 2  | 12      |  2.7      | j      |
+
+<span style="color:red">some **This is Red Bold.** text</span>
+
 
 
 
