@@ -1,8 +1,6 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6626508.svg)](https://doi.org/10.5281/zenodo.6626508)
 
 # MBW: Multiview Bootstrapping in the wild
-<!-- ![Alt Text](overview.gif | width=100) -->
-<!-- <img src=overview.gif width="750"> -->
 <p align="center">
   <img width="750" src=graphics/overview.gif>
 </p>
