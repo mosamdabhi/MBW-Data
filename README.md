@@ -59,9 +59,9 @@ We manually annotate 1-2% of the image frames per view. Our annotation consists 
 
 - We specify the number of keypoints and visualizae keypoint connections (joint connections) in the section below.
 
-    | Fish        | Chimpanzee |
-    | :---:          | :---     |
-    | <img width="150" src=graphics/joints_fish.jpg>     |
+    | Fish        | Chimpanzee | Colobus Monkey | Tiger | Clown fish | Seahorse | Turtle |
+    | :---:          | :---:     | :---:     |:---:     |:---:     |:---:     |:---:     |
+    | <img width="250" src=graphics/joints_fish_no_name.jpg>     | <img width="150" src=graphics/joints_chimpanzee.jpg>    | <img width="150" src=graphics/joints_colobus_monkey.jpg>    | <img width="250" src=graphics/joints_tiger.jpg>    | <img width="150" src=graphics/joints_clownfish.jpg>    | <img width="150" src=graphics/joints_seahorse.jpg>    | <img width="150" src=graphics/joints_turtle.jpg>    
 
     
 
