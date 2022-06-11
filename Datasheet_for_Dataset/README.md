@@ -89,7 +89,7 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 5. **Is there a label or target associated with each instance? If so, please provide a description.**
 
-    As noted in the column **Labels from MBW** in the [instance information table](#instance_information), labels (2D, 3D, bounding box) for each instance are provided for the categories with flag <img width="80" src=graphics/gr_available.png>. For the remaining categories with <img width="80" src=graphics/gr_NA.png>, only the initial 2% `W_GT` labels are provided, since we did not run MBW that could provide us with labels. We release this dataset to set a benchmark for solving challenging 2D and 3D landmark prediction tasks for in-the-wild unconstrained video captures.
+    As noted in the column **Labels from MBW** in the [instance information table](#instance_information), labels (2D, 3D, bounding box) for each instance are provided for the categories with flag <img width="80" src=../graphics/gr_available.png>. For the remaining categories with <img width="80" src=../graphics/gr_NA.png>, only the initial 2% `W_GT` labels are provided, since we did not run MBW that could provide us with labels. We release this dataset to set a benchmark for solving challenging 2D and 3D landmark prediction tasks for in-the-wild unconstrained video captures.
     
 
 
