@@ -98,7 +98,7 @@ Predicted labels visualization
     | Turtle        |  <img width="100" src=graphics/gr_NA.png>        | 
 ------------------
 
-- We visualize the predicted labels from **MBW** below (script to visualize is provided in this repository):
+- We visualize the predicted 2D keypoints from **MBW** below (script to visualize is provided in this repository):
 
 <p align="center">
   <img width="750" src=graphics/predicted_labels.gif>
