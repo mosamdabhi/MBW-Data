@@ -80,8 +80,29 @@ Joint connections visualization
     | :---:          | :---:     | :---:     |:---:     |:---:     |:---:     |:---:     |
     | <img width="250" src=graphics/joints_fish_no_name.jpg>     | <img width="150" src=graphics/joints_chimpanzee.jpg>    | <img width="150" src=graphics/joints_colobus_monkey.jpg>    | <img width="250" src=graphics/joints_tiger.jpg>    | <img width="150" src=graphics/joints_clownfish.jpg>    | <img width="150" src=graphics/joints_seahorse.jpg>    | <img width="150" src=graphics/joints_turtle.jpg>    
 
+
 Predicted labels visualization
 ------------------
+
+- 2D, 3D, and Bounding box labels for each image frames are provided for object categories with flag  <img width="80" src=graphics/gr_available.png> under column **Labels from MBW**. For the rest categories with  <img width="80" src=graphics/gr_NA.png>, only initial 2% `W_GT` labels are provided, since we did not run MBW that could provide us with labels. We release this dataset to set a benchmark for solving challenging 2D and 3D landmark prediction tasks for in-the-wild unconstrained video captures.    
+    
+
+    | Object        |                Labels from MBW                              | 
+    | :---          |                  :---:                                       |
+    | Fish          | <img width="100" src=graphics/gr_available.png>         | 
+    | Chimpanzee    | <img width="100" src=graphics/gr_available.png>         |    
+    | Colobus Monkey|  <img width="100" src=graphics/gr_available_grey_bg.png> |
+    | Tiger         |  <img width="100" src=graphics/gr_NA_grey_bg.png>        |
+    | Clownfish     |  <img width="100" src=graphics/gr_NA.png>                |    
+    | Seahorse      |  <img width="100" src=graphics/gr_NA_grey_bg.png>        |        
+    | Turtle        |  <img width="100" src=graphics/gr_NA.png>        | 
+------------------
+
+- We visualize the predicted labels from **MBW** below (script to visualize is provided in this repository):
+
+<p align="center">
+  <img width="750" src=graphics/predicted_labels.gif>
+</p>
 
 
 Released dataset format
@@ -119,7 +140,7 @@ The labels provided in the `.pkl` file can be visualized with the following shel
 - Above shell script accepts the following arguments which you can change according to the need:
     | Argument        | Input options | Description | 
     | :---          | :---     | :---     |
-    |    dataset       | `Fish`, `Colobus_Monkey`, `Chimpanzee` | Choose the object whose labels you want to visualize. 
+    |    dataset       | `Fish`, `Chimpanzee`, `Colobus_Monkey` | Choose the object whose labels you want to visualize. 
     |    generate_labels_type       | `2D`, `3D`, `BBox` | Choose the type of label visualization. `2D` and `BBox` overlays the 2D landmark predictions and Bounding Box crops onto the images while `3D` label visualization generates a 3D skeleton structures with moving camera viewing angles.  
     |    vis_labels_path       | `Visualizations` | Path to store label visualizations 
     |   label_color | `blue`, `red` | Landmark (keypoint) colors for visualization 
