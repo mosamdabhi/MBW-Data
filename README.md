@@ -83,22 +83,7 @@ Joint connections visualization
 
 Predicted labels visualization
 ------------------
-
-- 2D, 3D, and Bounding box labels for each image frames are provided for object categories with flag  <img width="80" src=graphics/gr_available.png> under column **Labels from MBW**. For the rest categories with  <img width="80" src=graphics/gr_NA.png>, only initial 2% `W_GT` labels are provided, since we did not run MBW that could provide us with labels. We release this dataset to set a benchmark for solving challenging 2D and 3D landmark prediction tasks for in-the-wild unconstrained video captures.    
-    
-
-    | Object        |                Labels from MBW                              | 
-    | :---          |                  :---:                                       |
-    | Fish          | <img width="100" src=graphics/gr_available.png>         | 
-    | Chimpanzee    | <img width="100" src=graphics/gr_available.png>         |    
-    | Colobus Monkey|  <img width="100" src=graphics/gr_available_grey_bg.png> |
-    | Tiger         |  <img width="100" src=graphics/gr_NA_grey_bg.png>        |
-    | Clownfish     |  <img width="100" src=graphics/gr_NA.png>                |    
-    | Seahorse      |  <img width="100" src=graphics/gr_NA_grey_bg.png>        |        
-    | Turtle        |  <img width="100" src=graphics/gr_NA.png>        | 
-------------------
-
-- We visualize the predicted 2D keypoints from **MBW** below (script to visualize is provided in this repository):
+- We visualize the predicted 2D keypoints from **MBW** for *Fish*, *Chimpanzee*, and *Colobus Monkey* below (script to visualize is provided in this repository):
 
 <p align="center">
   <img width="750" src=graphics/predicted_labels.gif>
