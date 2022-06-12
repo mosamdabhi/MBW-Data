@@ -173,7 +173,7 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 
 
-1. **What mechanisms or procedures were used to collect the data (e.g., hardware apparatus or sensor, manual human curation, software program, software API)?** *(How were these mechanisms or procedures validated?)*
+1. **<a name="collect">What mechanisms or procedures were used to collect the data </a> (e.g., hardware apparatus or sensor, manual human curation, software program, software API)?** *(How were these mechanisms or procedures validated?)*
     
     We captured 2-View videos from handheld smartphone cameras. In our case, we used an iPhone 11 Pro Max and an iPhone 12 Pro Max to capture the video sequences. We use Final Cut Pro to manually synchronize the 2-View video sequences using the audio signal and time stamps. Please note that all we require are 2-view synchronized image frames and manual annotations for 1-2% of the data. 
     
@@ -251,7 +251,7 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 1. **Was any preprocessing/cleaning/labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)?** *(If so, please provide a description. If not, you may skip the remainder of the questions in this section.)*
 
-    
+    We did not do any specific preprocessing or cleaning of the data except what is mentioned in [question #1](#collect) of Collection Process. Labeling was done 
     
 
 
