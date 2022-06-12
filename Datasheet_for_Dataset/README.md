@@ -46,7 +46,7 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 2. **<a name="instance_information">How many instances are there in total (of each type, if appropriate)? </a>** 
     
 
-    In total, there are **16148** instances in this dataset from **6** different object categories, coming from **2** camera views. The overall dataset statistics below reflect the above description:
+    In total, there are **16148** instances in this dataset from **7** different object categories, coming from **2** camera views. The overall dataset statistics below reflect the above description:
     
 
     | Object        | Frames (#) | Joints (#) | Manual labels (%)  |                Labels from MBW                              | 
