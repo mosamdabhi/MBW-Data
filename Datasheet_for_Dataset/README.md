@@ -175,7 +175,7 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 1. **<a name="collect">What mechanisms or procedures were used to collect the data </a> (e.g., hardware apparatus or sensor, manual human curation, software program, software API)?** *(How were these mechanisms or procedures validated?)*
     
-    We captured 2-View videos from handheld smartphone cameras. In our case, we used an iPhone 11 Pro Max and an iPhone 12 Pro Max to capture the video sequences. We use Final Cut Pro to manually synchronize the 2-View video sequences using the audio signal and time stamps. Please note that all we require are 2-view synchronized image frames and manual annotations for 1-2% of the data. 
+    We captured 2-View videos from handheld smartphone cameras. In our case, we used an iPhone 11 Pro Max and an iPhone 12 Pro Max to capture the video sequences at ~30 frames-per-second (fps). We use Final Cut Pro to manually synchronize the 2-View video sequences using the audio signal and time stamps. Please note that all we require are 2-view synchronized image frames and manual annotations for 1-2% of the data. 
     
 **Please note**: We are unable to provide the stereo baseline distance (m) and stereo angle (°) since the data was captured where the cameras were continuously moving thereby changing these metrics.     
 
@@ -251,18 +251,20 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 1. **Was any preprocessing/cleaning/labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)?** *(If so, please provide a description. If not, you may skip the remainder of the questions in this section.)*
 
-    We did not do any specific preprocessing or cleaning of the data except what is mentioned in [question #1](#collect) of Collection Process. Labeling was done 
+    We did not do any specific preprocessing or cleaning of the data except what is mentioned in [question #1](#collect) of Collection Process. Manual annotations were labeled by visually localizing the joints on the objects in the limited (1-2%) image frames.
     
 
 
 1. **Was the "raw" data saved in addition to the preprocessed/cleaned/labeled data (e.g., to support unanticipated future uses)?** *(If so, please provide a link or other access point to the "raw" data.)*
 
-    Yes, the original raw data is included in the distribution, in the folder `raw`.
+    Yes, the image frames released under the `images/` directory are sampled from the original "raw" video.
 
 
 1. **Is the software used to preprocess/clean/label the instances available?** *(If so, please provide a link or other access point.)*
-    
 
+    Yes. We used open-source [Matplotlib library](https://matplotlib.org) to visualize and label the joints. For further details, please refer [question #1] of this section.
+
+    
 
 1. **Any other comments?**
     
