@@ -1,6 +1,6 @@
 # MBW Zoo Dataset
 
-By: [Mosam Dabhi](TODO:url) `<mdabhi@andrew.cmu.edu>`, Chaoyang Wang, Tim Clifford, Laszlo Jeni, Ian Fasel, Simon Lucey
+By: [Mosam Dabhi](mailto:mdabhi@andrew.cmu.edu) `<mdabhi@andrew.cmu.edu>`, Chaoyang Wang, Tim Clifford, Laszlo Jeni, Ian Fasel, Simon Lucey
 
 As part of making dataset collection more easy and amenable in a wildly unconstrained setup, we collect a dataset of zoo animals using smartphone grade cameras, and annotate (~2\%) of the collected frames with 2D keypoint landmarks. We call this dataset the **Multiview Bootstrapping in the wild (MBW) Zoo dataset**; what follows below is the [datasheet](https://arxiv.org/abs/1803.09010) describing this data. If you use this dataset, please acknowledge it by citing the original paper.
 
@@ -65,7 +65,7 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 
 
-3. **Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set?** *(If the dataset is a sample, then what is the larger set? Is the sample representative of the larger set (e.g., geographic coverage)? If so, please describe how this representativeness was validated/verified. If it is not representative of the larger set, please describe why not (e.g., to cover a more diverse range of instances, because instances were withheld or unavailable).)*
+3. **<a name="instance_information_2">Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set?</a>** *(If the dataset is a sample, then what is the larger set? Is the sample representative of the larger set (e.g., geographic coverage)? If so, please describe how this representativeness was validated/verified. If it is not representative of the larger set, please describe why not (e.g., to cover a more diverse range of instances, because instances were withheld or unavailable).)*
 
     It is a sample of all videos captured casually in an unconstrained environment such as zoo. It is not intended to be representative: the data was collected randomly in the order of visit. This data was collected with the intent to show the applicability of MBW in challenging data scenarios -- specifically to label articulated objects in the wild at scale.  
 
@@ -89,7 +89,7 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 5. **Is there a label or target associated with each instance? If so, please provide a description.**
 
-    As noted in the column **Labels from MBW** in the [instance information table](#instance_information), labels (2D, 3D, bounding box) for each instance are provided for the categories with flag <img width="80" src=../graphics/gr_available.png>. For the remaining categories with <img width="80" src=../graphics/gr_NA.png>, only the initial 2% `W_GT` labels are provided, since we did not run MBW that could provide us with labels. We release this dataset to set a benchmark for solving challenging 2D and 3D landmark prediction tasks for in-the-wild unconstrained video captures.
+    As noted in the column **Labels from MBW** in the [instance information table](#instance_information), label or targets for each instance are associated for the categories with flag **Available** (all the fields shown in the table [above](#pkl_information) are available in the pickle file). For the rest, only initial 2% `W_GT` labels are provided, since we did not run MBW that could provide us with labels. We release this dataset to set a benchmark for solving challenging 2D and 3D landmark prediction tasks for in-the-wild unconstrained video captures.
     
 
 
@@ -167,46 +167,63 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 ## Collection Process
 
-
 1. **How was the data associated with each instance acquired?** *(Was the data directly observable (e.g., raw text, movie ratings), reported by subjects (e.g., survey responses), or indirectly inferred/derived from other data (e.g., part-of-speech tags, model-based guesses for age or language)? If data was reported by subjects or indirectly inferred/derived from other data, was the data validated/verified? If so, please describe how.)*
-    
-    
-    
+
+    The data was collected by two smartphone cameras without any constraints: meaning no guidance or instructions were given as to how the data was collected. The intention was to mimic the data captured casually by anyone holding a smartphone grade camera. Due to this reason, the cameras were continuously moving in space changing their extrinsics with respect to each other thereby making this a dynamic setup. Thus, this dataset could be used to benchmark robust algorithms in the domain of **sparse non-rigid 2D/3D landmark predictions**, **dense non-rigid shape reconstrctions**, Neural radiance fields **(NeRF)**, as well as Simultaneous Localization and Mapping **(SLAM)**. 
+
 
 
 1. **What mechanisms or procedures were used to collect the data (e.g., hardware apparatus or sensor, manual human curation, software program, software API)?** *(How were these mechanisms or procedures validated?)*
     
+    We captured 2-View videos from handheld smartphone cameras. In our case, we used an iPhone 11 Pro Max and an iPhone 12 Pro Max to capture the video sequences. We use Final Cut Pro to manually synchronize the 2-View video sequences using the audio signal and time stamps. Please note that all we require are 2-view synchronized image frames and manual annotations for 1-2% of the data. 
+
+    
 
 
 1. **If the dataset is a sample from a larger set, what was the sampling strategy (e.g., deterministic, probabilistic with specific sampling probabilities)?**
+    Please refer the answer to [question #2](#instance_information) and [question #3](#instance_information_2) in Composition.
     
 
 
 1. **Who was involved in the data collection process (e.g., students, crowdworkers, contractors) and how were they compensated (e.g., how much were crowdworkers paid)?**
+
+    The authors were helped by Shraddha Thakkar who graciously volunteered to capture the data during their visit to a Zoo with authors.
     
 
 
 1. **Over what timeframe was the data collected?** *(Does this timeframe match the creation timeframe of the data associated with the instances (e.g., recent crawl of old news articles)?  If not, please describe the timeframe in which the data associated with the instances was created.)*
+
+    The dataset was collected on March 19, 2022.
     
 
 
 1. **Were any ethical review processes conducted (e.g., by an institutional review board)?** *(If so, please provide a description of these review processes, including the outcomes, as well as a link or other access point to any supporting documentation.)*
+
+    No review processes were conducted with respect to the collection of this data. Manual annotation was conducted by visually localizing the joints on the objects whose accuracy was confirmed by visual inspection. 
     
 
 
 1. **Does the dataset relate to people?** *(If not, you may skip the remaining questions in this section.)*
+
+    No.
     
 
 
 1. **Did you collect the data from the individuals in question directly, or obtain it via third parties or other sources (e.g., websites)?**
+
+    N/A.
     
 
 
 1. **Were the individuals in question notified about the data collection?** *(If so, please describe (or show with screenshots or other information) how notice was provided, and provide a link or other access point to, or otherwise reproduce, the exact language of the notification itself.)*
+
+    N/A.
     
 
 
 1. **Did the individuals in question consent to the collection and use of their data?** *(If so, please describe (or show with screenshots or other information) how consent was requested and provided, and provide a link or other access point to, or otherwise reproduce, the exact language to which the individuals consented.)*
+
+    N/A.
     
 
 
@@ -232,10 +249,13 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 
 1. **Was any preprocessing/cleaning/labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)?** *(If so, please provide a description. If not, you may skip the remainder of the questions in this section.)*
+
+    
     
 
 
 1. **Was the "raw" data saved in addition to the preprocessed/cleaned/labeled data (e.g., to support unanticipated future uses)?** *(If so, please provide a link or other access point to the "raw" data.)*
+
     Yes, the original raw data is included in the distribution, in the folder `raw`.
 
 
@@ -255,23 +275,36 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 
 1. **Has the dataset been used for any tasks already?** *(If so, please provide a description.)*
-    
+
+    Yes, the dataset has already been used for the task of 2D and 3D landmark predictions (sparse keypoints) by **MBW**. This task specifications are discussed in detail in the MBW paper.
 
 
 1. **Is there a repository that links to any or all papers or systems that use the dataset?** *(If so, please provide a link or other access point.)*
+
+    No.
+
+
+1. **<a name="no_task">What (other) tasks could the dataset be used for?</a>**
+
+    This dataset could be used for the following computer vision tasks:
     
-
-
-1. **What (other) tasks could the dataset be used for?**
+    1. Dense 3D reconstruction of the given articualted object categories.
+    2. Scene flow and optical flow generation tasks.
+    3. NeRF: Novel view rendering - owing to synchronized multi-view video sequences.
+    4. SLAM: Estimation of cameras in space to aid the applications of robotics.
+    
     
 
 
 1. **Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses?** *(For example, is there anything that a future user might need to know to avoid uses that could result in unfair treatment of individuals or groups (e.g., stereotyping, quality of service issues) or other undesirable harms (e.g., financial harms, legal risks)  If so, please provide a description. Is there anything a future user could do to mitigate these undesirable harms?)*
+
+    No, to the best of our knowledge.
     
 
 
 1. **Are there tasks for which the dataset should not be used?** *(If so, please provide a description.)*
-    
+
+    Please refer [question #3](#no_task) of this topic. Apart from that, our answer to this question is: No, to the best of our knowledge.
 
 
 2. **Any other comments?**
@@ -286,22 +319,30 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 1. **Will the dataset be distributed to third parties outside of the entity (e.g., company, institution, organization) on behalf of which the dataset was created?** *(If so, please provide a description.)*
     
-    Yes, the dataset is freely available.
+    Yes, the dataset is freely available under `CC-BY-NC` license. 
 
 
 1. **How will the dataset will be distributed (e.g., tarball  on website, API, GitHub)?** *(Does the dataset have a digital object identifier (DOI)?)*
+    
+    The dataset is freely distributed at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6626508.svg)](https://doi.org/10.5281/zenodo.6626508). Yes, since the dataset is hosted on Zenodo, it will have a DOI.
     
 
 
 1. **When will the dataset be distributed?**
     
+    Please refer to the question above.
+    
 
 
 1. **Will the dataset be distributed under a copyright or other intellectual property (IP) license, and/or under applicable terms of use (ToU)?** *(If so, please describe this license and/or ToU, and provide a link or other access point to, or otherwise reproduce, any relevant licensing terms or ToU, as well as any fees associated with these restrictions.)*
     
+    The dataset is distributed under a `CC-BY-NC` license.
+    
 
 
 1. **Have any third parties imposed IP-based or other restrictions on the data associated with the instances?** *(If so, please describe these restrictions, and provide a link or other access point to, or otherwise reproduce, any relevant licensing terms, as well as any fees associated with these restrictions.)*
+
+    No.
     
 
 
@@ -322,18 +363,24 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 
 1. **Who is supporting/hosting/maintaining the dataset?**
+
+    The author (Mosam Dabhi) is maintaining and hosting the dataset information page on GitHub, while the dataset itself is hosted on Zenodo.
     
 
 
 1. **How can the owner/curator/manager of the dataset be contacted (e.g., email address)?**
+    
+    E-mail address of the corresponding author is provided at the top of this document.
 
 
 1. **Is there an erratum?** *(If so, please provide a link or other access point.)*
-    
+
+    Currently, no. As errors are encountered, future versions of the dataset may be released (but will be versioned). The information to access the latest version (with updated DOI) will all be provided in the same GitHub location.
 
 
 1. **Will the dataset be updated (e.g., to correct labeling errors, add new instances, delete instances')?** *(If so, please describe how often, by whom, and how updates will be communicated to users (e.g., mailing list, GitHub)?)*
-    
+
+    Same as previous.
 
 
 1. **If the dataset relates to people, are there applicable limits on the retention of the data associated with the instances (e.g., were individuals in question told that their data would be retained for a fixed period of time and then deleted)?** *(If so, please describe these limits and explain how they will be enforced.)*
