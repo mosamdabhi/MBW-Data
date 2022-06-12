@@ -181,6 +181,7 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 
 1. **If the dataset is a sample from a larger set, what was the sampling strategy (e.g., deterministic, probabilistic with specific sampling probabilities)?**
+
     Please refer the answer to [question #2](#instance_information) and [question #3](#instance_information_2) in Composition.
     
 
