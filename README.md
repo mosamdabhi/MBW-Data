@@ -1,19 +1,18 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6626508.svg)](https://doi.org/10.5281/zenodo.6626508)
 
-# MBW: Multiview Bootstrapping in the wild
+# Multiview Bootstrapping in the wild (MBW) - Zoo Dataset
+
 <p align="center">
   <img width="750" src=graphics/overview.gif>
 </p>
-
-Labeling articulated objects in unconstrained settings have a wide variety of applications including entertainment, neuroscience, psychology, ethology, and many fields of medicine. Large offline labeled datasets do not exist for all but the most common articulated object categories (e.g., humans). With just a few annotations (representing 1-2% of the frames), we are able to produce 2D results comparable to state-of-the-art fully supervised methods, and obtain 3D reconstructions that are impossible with other existing approaches. Our Multi-view Bootstrapping in the Wild (MBW) approach demonstrates results on standard human datasets, as well as tigers, cheetahs, fish, colobus monkeys, chimpanzees, and flamingos from videos captured casually in a zoo. 
-
-# Dataset:
-We release this challenging dataset consisting image frames of tail-end distribution categories (such as Fish, Colobus Monkeys, Chimpanzees, etc.) with their corresponding 2D, 3D, and Bounding-Box labels generated from minimal human intervention. Some of the prominent use cases of this dataset include not only sparse **2D and 3D landmark prediction** tasks, but also for dense reconstruction tasks such as **dense deformable shape reconstruction**, novel view rendering (**NeRF**), and finally this dataset could also be used for advancing Simultaneous Localization and Mapping (**SLAM**) frameworks.
 
 Table of contents
 =================
 
 <!--ts-->
+   * [Overview](#overview)
+      * [Abstract](#abstract)
+      * [MBW-Zoo dataset](#mbw-zoo-dataset)
    * [Setup](#setup)
    * [Dataset](#dataset)
       * [Collection process](#collection-process)
@@ -29,6 +28,21 @@ Table of contents
    * [Generate labels for your own capture!](#generate-labels-for-your-own-capture)
 <!--te-->
 
+Overview
+============
+
+Abstract
+------------------
+
+Labeling articulated objects in unconstrained settings have a wide variety of applications including entertainment, neuroscience, psychology, ethology, and many fields of medicine. Large offline labeled datasets do not exist for all but the most common articulated object categories (e.g., humans). With just a few annotations (representing 1-2% of the frames), we are able to produce 2D results comparable to state-of-the-art fully supervised methods, and obtain 3D reconstructions that are impossible with other existing approaches. Our Multi-view Bootstrapping in the Wild (MBW) approach demonstrates results on standard human datasets, as well as tigers, cheetahs, fish, colobus monkeys, chimpanzees, and flamingos from videos captured casually in a zoo. 
+
+MBW-Zoo dataset
+------------------
+
+We release this challenging dataset consisting image frames of tail-end distribution categories (such as Fish, Colobus Monkeys, Chimpanzees, etc.) with their corresponding 2D, 3D, and Bounding-Box labels generated from minimal human intervention. Some of the prominent use cases of this dataset include not only sparse **2D and 3D landmark prediction**, but also dense reconstruction tasks such as **dense deformable shape reconstruction**, novel view rendering (**NeRF**), and finally this dataset could also be used for advancing Simultaneous Localization and Mapping (**SLAM**) frameworks.
+
+The data was collected by two smartphone cameras without any constraints: meaning no guidance or instructions were given as to how the data should be collected. The intention was to mimic the data captured casually by anyone holding a smartphone grade camera. Due to this reason, the cameras were continuously moving in space changing their extrinsics with respect to each other, capturing an in-the-wild dynamic scene. Thus, this dataset could be used to benchmark robust algorithms in various computer vision tasks.
+
 
 
 
@@ -36,7 +50,7 @@ Setup
 ============
 
 
-1. Clone the repository and pull data using lfs. 
+1. Clone the repository. 
     ```
     git clone git@github.com:mosamdabhi/MBW-Data.git
     cd MBW-Data
