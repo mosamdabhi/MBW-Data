@@ -1,0 +1,23 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: MBW Zoo data
+message: Please cite this dataset using these metadata.
+type: dataset
+authors:
+  - given-names: Mosam
+    family-names: Dabhi
+    email: mdabhi@andrew.cmu.edu
+    affiliation: Carnegie Mellon University
+    orcid: 'https://orcid.org/0000-0001-5822-3838'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.6626507
+url: 'https://github.com/mosamdabhi/MBW-Data'
+keywords:
+  - Auto labeling
+  - Multi-view 2D-3D
+  - Keypoint Detection
+  - Self-supervision
+license: CC-BY-NC-4.0
