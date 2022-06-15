@@ -53,10 +53,10 @@ Setup
 1. Clone the repository. 
     ```
     git clone git@github.com:mosamdabhi/MBW-Data.git
-    cd MBW-Data
+    cd MBW-Data/Data
     ```
-2. Download the data zip file from Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6626508.svg)](https://doi.org/10.5281/zenodo.6626508)
-3. Uncompress the data zip file `MBW-Data.zip` and place it in the current working directory.
+2. Download the data zip file from here: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6626508.svg)](https://doi.org/10.5281/zenodo.6626508)
+3. Place the downloaded zip file in the `MBW-Data/Data` directory and uncompress the file.
 4. Create a conda environment to run the visualization scripts.
     ```
     conda env create -f environment.yml && conda activate mbw
