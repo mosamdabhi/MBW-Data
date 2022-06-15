@@ -121,8 +121,7 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 10. **Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g., websites, tweets, other datasets)?** *(If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (i.e., including the external resources as they existed at the time the dataset was created); c) are there any restrictions (e.g., licenses, fees) associated with any of the external resources that might apply to a future user? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.)*
 
-    The dataset needs to be downloaded using the following DOI from Zenodo server: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6626508.svg)](https://doi.org/10.5281/zenodo.6626508)
-    
+    The dataset needs to be downloaded using the following DOI from Zenodo server: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6644389.svg)](https://doi.org/10.5281/zenodo.6644389)
 
 
 11. **Does the dataset contain data that might be considered confidential (e.g., data that is protected by legal privilege or by doctor-patient confidentiality, data that includes the content of individuals' non-public communications)?** *(If so, please provide a description.)*
@@ -293,8 +292,9 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
     
     1. Dense 3D reconstruction of the given articualted object categories.
     2. Scene flow and optical flow generation tasks.
-    3. NeRF: Novel view rendering - owing to synchronized multi-view video sequences.
-    4. SLAM: Estimation of cameras in space to aid the applications of robotics.
+    3. Detection and tracking of objects.
+    4. NeRF: Novel view rendering - owing to synchronized multi-view video sequences.
+    5. SLAM: Estimation of cameras in space to aid the applications of robotics.
     
     
 
@@ -327,7 +327,7 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
 
 1. **How will the dataset will be distributed (e.g., tarball  on website, API, GitHub)?** *(Does the dataset have a digital object identifier (DOI)?)*
     
-    The dataset is freely distributed at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6626508.svg)](https://doi.org/10.5281/zenodo.6626508). Yes, since the dataset is hosted on Zenodo, it will have a DOI.
+    The dataset is freely distributed at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6644389.svg)](https://doi.org/10.5281/zenodo.6644389). Yes, since the dataset is hosted on Zenodo, it will have a DOI.
     
 
 
