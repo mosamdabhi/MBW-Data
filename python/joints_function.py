@@ -9,6 +9,7 @@ import numpy as np
 
 def get_joints(str_object):
     R = np.zeros((3, 3))
+    range_scale = 1
     if str_object == "Human":
         joint_connections = (
             (14, 15),
@@ -28,6 +29,7 @@ def get_joints(str_object):
             (8, 14),
             (9, 10),
         )
+        R = np.eye(3)
         range_scale = 1
 
     elif str_object == "Cheetah":
@@ -54,6 +56,7 @@ def get_joints(str_object):
             (4, 14),
             (4, 17),
         )
+        R = np.eye(3)
         range_scale = 1
 
     elif str_object == "Flamingo":
@@ -70,6 +73,7 @@ def get_joints(str_object):
             (6, 9),
             (9, 10),
         )
+        R = np.eye(3)
         range_scale = 1
 
     elif str_object == "Tiger":
@@ -90,6 +94,7 @@ def get_joints(str_object):
             (13, 14),
             (14, 15),
         )
+        R = np.eye(3)
         range_scale = 1
 
     elif str_object == "Fish":
@@ -114,6 +119,36 @@ def get_joints(str_object):
         R[0, 0], R[0, 1], R[0, 2] = 1, 0, 0
         R[1, 0], R[1, 1], R[1, 2] = 0, 0, 1
         R[2, 0], R[2, 1], R[2, 2] = 0, 1, 0
+
+    elif str_object == "Clownfish":
+        joint_connections = ((0, 1), (1, 2), (2, 3), (0, 3), (1, 3), (0, 4), (2, 4), (1, 4))
+        R = np.eye(3)
+
+    elif str_object == "Tiger":
+        joint_connections = (
+            (0, 1),
+            (1, 2),
+            (2, 3),
+            (3, 4),
+            (4, 5),
+            (1, 6),
+            (6, 7),
+            (1, 8),
+            (8, 9),
+            (3, 10),
+            (10, 11),
+            (3, 12),
+            (12, 13),
+        )
+        R = np.eye(3)
+
+    elif str_object == "Seahorse":
+        joint_connections = ((0, 1), (1, 2), (2, 3), (3, 4), (4, 5), (1, 3))
+        R = np.eye(3)
+
+    elif str_object == "Turtle":
+        joint_connections = ((0, 1), (1, 2), (2, 3), (3, 4), (1, 4)(1, 5), (1, 8), (3, 6), (3, 7))
+        R = np.eye(3)
 
     elif str_object == "Colobus_Monkey":
         joint_connections = (
@@ -191,6 +226,7 @@ def get_joints(str_object):
             (35, 36),
             (36, 37),
         )
+        R = np.eye(3)
 
     return joint_connections, range_scale, R
 
