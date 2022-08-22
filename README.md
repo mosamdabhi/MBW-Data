@@ -1,5 +1,7 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6644389.svg)](https://doi.org/10.5281/zenodo.6644389)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7011549.svg)](https://doi.org/10.5281/zenodo.7011549)
 
+
+10.5281/zenodo.7011549
 
 
 # Multiview Bootstrapping in the wild (MBW) - Zoo Dataset
