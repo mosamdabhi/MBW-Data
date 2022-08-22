@@ -123,7 +123,7 @@ Annotations format
     | Key           | Description |
     | :---          | :---     |
     | W_GT          | Manual annotation. Non-NaN values for 1-2% of data. NaN values for the rest.      |
-    | W_Pred        | 2D landmark predictions (labels) generated from MBW.       | 
+    | W_Predictions | 2D landmark predictions (labels) generated from MBW.       | 
     | S_Pred        | 3D landmark predictions (labels) generated from MBW. The 3D reconstructions are up-to-scale.       | 
     | BBox          | Bounding box crops generated from MBW          | 
     | confidence    | Flag specifying confidence for the MBW predictions. `True` specifies high confidence. `False` specifies low confidence. This flag is generated from the uncertainty equation (Eq. 2) given in the paper.          | 
