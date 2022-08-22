@@ -55,8 +55,8 @@ As part of making dataset collection more easy and amenable in a wildly unconstr
     | Colobus Monkey| 391        | 16       |  5.1                 |  <img width="100" src=../graphics/gr_available_grey_bg.png> |
     | Chimpanzee    | 204        | 16       |  6.3                 |  <img width="100" src=../graphics/gr_available.png>         |
     | Tiger         | 1829       | 14       |  0.4                 |  <img width="100" src=../graphics/gr_available_grey_bg.png> |
-    | Clownfish     | 909        | 6        |  2                   |  <img width="100" src=../graphics/gr_available.png>         |    
-    | Seahorse      | 479        | 6        |  2                   |  <img width="100" src=../graphics/gr_available_grey_bg.png> |        
+    | Clownfish     | 909        | 6        |  2.0                   |  <img width="100" src=../graphics/gr_available.png>         |    
+    | Seahorse      | 479        | 6        |  2.2                   |  <img width="100" src=../graphics/gr_available_grey_bg.png> |        
     | Turtle        | 2806       | 9       |  N/A                   |  <img width="100" src=../graphics/gr_NA.png>        |            
     
 
