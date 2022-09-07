@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7011549.svg)](https://doi.org/10.5281/zenodo.7011549)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7058567.svg)](https://doi.org/10.5281/zenodo.7058567)
 
 
 
@@ -57,7 +57,7 @@ Setup
     git clone git@github.com:mosamdabhi/MBW-Data.git
     cd MBW-Data/Data
     ```
-2. Download the data zip file from here: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7011549.svg)](https://doi.org/10.5281/zenodo.7011549)
+2. Download the data zip file from here: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7058567.svg)](https://doi.org/10.5281/zenodo.7058567)
 3. Place the downloaded zip file in the `MBW-Data/Data` directory and uncompress the file.
 4. Create a conda environment to run the visualization scripts.
     ```
@@ -112,7 +112,7 @@ Released dataset format
 
 
 
-The dataset ([![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7011549.svg)](https://doi.org/10.5281/zenodo.7011549)) is divided into two directories: `annot` and `images`. As names suggest, the `annot` directory contains annotations and `images` directory consists of 2-view synchronized image frames.
+The dataset ([![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7058567.svg)](https://doi.org/10.5281/zenodo.7058567)) is divided into two directories: `annot` and `images`. As names suggest, the `annot` directory contains annotations and `images` directory consists of 2-view synchronized image frames.
 
 
 Annotations format
