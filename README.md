@@ -76,7 +76,7 @@ We capture 2-View videos from handheld smartphone cameras. In our case, we used 
 Frames visualization
 ------------------
 
-In total, there are **16148** instances in this dataset from **7** different object categories, coming from **2** camera views.
+In total, there are **16154** instances in this dataset from **7** different object categories, coming from **2** camera views.
 <p align="center">
   <img width="750" src=graphics/all_instances.jpg>
 </p>
@@ -157,4 +157,4 @@ Generate labels for your own capture!
 ============
 Since all we need are N-view synchroized image frames and annotations for 1-2% of data, all you need to provide are 2 or more views synchronized image frames and manual annotations for 1-2% of your data. After putting these annotations and image frames in the format shown above, **MBW** is able to provide 2D, 3D, and Bounding Box labels for your data. 
 
-The code to run **MBW** on your own data would be released soon! We will release the code under MIT License.
+The code to run **MBW** on your own data can be found here: https://github.com/mosamdabhi/MBW
