@@ -1,7 +1,9 @@
 # Multiview Bootstrapping in the wild (MBW) - Zoo Dataset <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/08/Logo_for_Conference_on_Neural_Information_Processing_Systems.svg/1200px-Logo_for_Conference_on_Neural_Information_Processing_Systems.svg.png" width=200>
 
 
-### [Paper](https://arxiv.org/abs/2210.01721) | [Project page](https://multiview-bootstrapping-in-wild.github.io) | [MBW-Zoo Dataset](https://github.com/mosamdabhi/MBW-Data): [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7058567.svg)](https://doi.org/10.5281/zenodo.7058567) | [MBW pretrained models: ![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7054596.svg)](https://doi.org/10.5281/zenodo.7054596)  <br>
+### [Paper](https://arxiv.org/abs/2210.01721) | [MBW Codebase](https://github.com/mosamdabhi/MBW) | [Project page](https://multiview-bootstrapping-in-wild.github.io) <br>
+
+### [MBW-Zoo Dataset](https://github.com/mosamdabhi/MBW-Data): [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7058567.svg)](https://doi.org/10.5281/zenodo.7058567) | [MBW pretrained models: ![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7054596.svg)](https://doi.org/10.5281/zenodo.7054596)  <br>
 
 
 
@@ -162,3 +164,29 @@ Generate labels for your own capture!
 Since all we need are N-view synchroized image frames and annotations for 1-2% of data, all you need to provide are 2 or more views synchronized image frames and manual annotations for 1-2% of your data. After putting these annotations and image frames in the format shown above, **MBW** is able to provide 2D, 3D, and Bounding Box labels for your data. 
 
 The code to run **MBW** on your own data can be found here: https://github.com/mosamdabhi/MBW
+
+
+### Citation
+If you use our code, dataset, or models in your research, please cite with:
+```
+
+@inproceedings{dabhi2022mbw,
+	title={MBW: Multi-view Bootstrapping in the Wild},
+	author={Dabhi, Mosam and Wang, Chaoyang and Clifford, Tim and Jeni, Laszlo and Fasel, Ian and Lucey, Simon},
+	booktitle={Thirty-sixth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+	year={2022},
+	ee = {https://openreview.net/forum?id=i1bFPSw42W0},
+	organization={NeurIPS}
+}
+
+
+@inproceedings{dabhi2021mvnrsfm,
+	title={High Fidelity 3D Reconstructions with Limited Physical Views},
+	author={Dabhi, Mosam and Wang, Chaoyang and Saluja, Kunal and Jeni, Laszlo and Fasel, Ian and Lucey, Simon},
+	booktitle={2021 International Conference on 3D Vision (3DV)},
+	year={2021},
+	ee = {https://ieeexplore.ieee.org/abstract/document/9665845},
+	organization={IEEE}
+}
+
+```
